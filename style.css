@@ -1,0 +1,194 @@
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    box-sizing:border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: #000;
+}
+
+.board {
+    width: calc(100vh - 50px);
+    height: calc(100vh - 50px);
+    max-width: calc(100vw - 50px);
+    max-height: calc(100vw - 50px);
+    background-color: rgb(248, 243, 228);
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.dice {
+    height: 100px;
+    width: 100px;
+    background-color: white;
+    border-radius: 20px;
+    font-size: 50px;
+    text-align: center;
+}
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.home p{
+    font-size: 2.4vw;
+    color: grey;
+}
+.disc{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: 2px solid rgb(104, 104, 104);
+    transform: scale(0.8);
+}
+.active{
+    border: 2px solid black;
+    animation-name: blink;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+}
+@keyframes blink {
+    0% {transform: scale(0.9);}
+    50% {transform: scale(0.8);}
+    100% {transform: scale(0.9);}
+  }
+  
+.g{
+    background-color: #09df1495;
+}.y{
+    background-color: #ece51271;
+}.b{
+    background-color: #0cb5e871;
+}.r{
+    background-color: #f007079a;
+}
+@media screen and (min-width: 768px) {
+    .board {
+        margin-right: 50px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    body {
+        flex-direction: column;
+    }
+
+    .dice {
+        margin-top: 50px;
+    }
+}
+
+
+
+
+.green {
+    background-color: #16ab1d;
+}
+.red {
+    background-color: #e53935;
+}
+.yellow {
+    background-color: #ead518;
+}
+.blue {
+    background-color: #29b6f6;
+}
+
+.house {
+    display: inline-block;
+    position: absolute;
+    width:40%;
+    height:40%;
+    padding:7%;
+}
+.box {
+    position: relative;
+    width:100%;
+    height:100%;
+    background-color:white;
+    padding:20%;
+    border-radius: 10px;
+}
+.square {
+    position: absolute;
+    width:25%;
+    height:25%;
+    padding: 0px;
+    border-radius: 30%;
+}
+.square-one {
+    top:20%;
+    left:20%;
+}
+.square-two {
+    top: 20%;
+    right: 20%;
+}
+.square-three {
+    bottom: 20%;
+    left: 20%;
+}
+.square-four {
+    bottom: 20%;
+    right: 20%;
+}
+.home {
+    position: absolute;
+    top:40%;
+    left: 40%;
+    width: 20%;
+    height: 20%;
+    border-bottom: 20px solid #e53935;
+    border-top: 20px solid #f8e00a;
+    border-left: 20px solid #66bb6a;
+    border-right: 20px solid #29b6f6;
+}
+.cells {
+    position: absolute;
+    width: 6.66% ;
+    height: 6.66%;
+    border-collapse: collapse;
+    border: 1px solid #857da5d3 ;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.safe {
+    background-image: url("https://img.icons8.com/plumpy/50/star--v1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.g-start {
+    background-image: url("https://img.icons8.com/plumpy/50/star--v1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #42cd49;
+}
+.y-start {
+    background-image: url("https://img.icons8.com/plumpy/50/star--v1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #f7e227;
+}
+.r-start {
+    background-image: url("https://img.icons8.com/plumpy/50/star--v1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #e53935;
+}
+.b-start {
+    background-image: url("https://img.icons8.com/plumpy/50/star--v1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #29b6f6;
+}

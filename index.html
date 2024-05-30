@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ludo</title>
+    <script defer src="./script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    
+
+    <div class="board">
+      <div class="house green">
+        <div class="box">
+          <div class="square square-one green"><div id="g1" class="disc g"></div></div>
+          <div class="square square-two green"><div id="g2" class="disc g"></div></div>
+          <div class="square square-three green"><div id="g3" class="disc g"></div></div>
+          <div class="square square-four green"><div id="g4" class="disc g"></div></div>
+        </div>
+      </div>
+
+      <div class="house yellow" style="right: 0">
+        <div class="box">
+          <div class="square square-one yellow"><div id="y1" class="disc y"></div></div>
+          <div class="square square-two yellow"><div id="y2" class="disc y"></div></div>
+          <div class="square square-three yellow"><div id="y3" class="disc y"></div></div>
+          <div class="square square-four yellow"><div id="y4" class="disc y"></div></div>
+        </div>
+      </div>
+
+      <div class="house red" style="bottom: 0">
+        <div class="box">
+          <div class="square square-one red"><div id="r1" class="disc r"></div></div>
+          <div class="square square-two red"><div id="r2" class="disc r"></div></div>
+          <div class="square square-three red"><div id="r3" class="disc r"></div></div>
+          <div class="square square-four red"><div id="r4" class="disc r"></div></div>
+        </div>
+      </div>
+
+      <div class="house blue" style="bottom: 0; right: 0">
+        <div class="box">
+          <div class="square square-one blue"><div id="b1" class="disc b"></div></div>
+          <div class="square square-two blue"><div id="b2" class="disc b"></div></div>
+          <div class="square square-three blue"><div id="b3" class="disc b"></div></div>
+          <div class="square square-four blue"><div id="b4" class="disc b"></div></div>
+        </div>
+      </div>
+
+      <div class="home"><p>HOME</p></div>
+      <div id="12" class="cells" style="top: 40%"></div>
+      <div id="13" class="cells g-start" style="top: 40%; left: 6.66%"></div>
+      <div id="14" class="cells" style="top: 40%; left: 13.32%"></div>
+      <div id="15" class="cells" style="top: 40%; left: 19.98%"></div>
+      <div id="16" class="cells" style="top: 40%; left: 26.64%"></div>
+      <div id="17" class="cells" style="top: 40%; left: 33.3%"></div>
+
+      <div id="23" class="cells" style="top: 0; left: 40%"></div>
+      <div id="22" class="cells" style="top: 6.66%; left: 40%"></div>
+      <div id="21" class="cells safe" style="top: 13.32%; left: 40%"></div>
+      <div id="20" class="cells" style="top: 19.98%; left: 40%"></div>
+      <div id="19" class="cells" style="top: 26.64%; left: 40%"></div>
+      <div id="18" class="cells" style="top: 33.3%; left: 40%"></div>
+
+      <div id="24" class="cells" style="top: 0; left: 46.66%"></div>
+      <div id="600" class="cells yellow" style="top: 6.66%; left: 46.66%"></div>
+      <div
+        id="601"
+        class="cells yellow"
+        style="top: 13.32%; left: 46.66%"
+      ></div>
+      <div
+        id="602"
+        class="cells yellow"
+        style="top: 19.98%; left: 46.66%"
+      ></div>
+      <div
+        id="603"
+        class="cells yellow"
+        style="top: 26.64%; left: 46.66%"
+      ></div>
+      <div id="604" class="cells yellow" style="top: 33.3%; left: 46.66%"></div>
+
+      <div id="25" class="cells" style="top: 0; left: 53.32%"></div>
+      <div id="26" class="cells y-start" style="top: 6.66%; left: 53.32%"></div>
+      <div id="27" class="cells" style="top: 13.32%; left: 53.32%"></div>
+      <div id="28" class="cells" style="top: 19.98%; left: 53.32%"></div>
+      <div id="29" class="cells" style="top: 26.64%; left: 53.32%"></div>
+      <div id="30" class="cells" style="top: 33.3%; left: 53.32%"></div>
+
+      <div id="31" class="cells" style="top: 40%; right: 33.3%"></div>
+      <div id="32" class="cells" style="top: 40%; right: 26.64%"></div>
+      <div id="33" class="cells" style="top: 40%; right: 19.98%"></div>
+      <div id="34" class="cells safe" style="top: 40%; right: 13.32%"></div>
+      <div id="35" class="cells" style="top: 40%; right: 6.66%"></div>
+      <div id="36" class="cells" style="top: 40%; right: 0"></div>
+
+      <div id="bh5" class="cells blue" style="top: 46.66%; right: 33.3%"></div>
+      <div id="bh4" class="cells blue" style="top: 46.66%; right: 26.64%"></div>
+      <div id="bh3" class="cells blue" style="top: 46.66%; right: 19.98%"></div>
+      <div id="bh2" class="cells blue" style="top: 46.66%; right: 13.32%"></div>
+      <div id="bh1" class="cells blue" style="top: 46.66%; right: 6.66%"></div>
+      <div id="37" class="cells" style="top: 46.66%; right: 0"></div>
+
+      <div id="43" class="cells" style="top: 53.32%; right: 33.3%"></div>
+      <div id="42" class="cells" style="top: 53.32%; right: 26.64%"></div>
+      <div id="41" class="cells" style="top: 53.32%; right: 19.98%"></div>
+      <div id="40" class="cells" style="top: 53.32%; right: 13.32%"></div>
+      <div
+        id="39"
+        class="cells b-start"
+        style="top: 53.32%; right: 6.66%"
+      ></div>
+      <div id="38" class="cells" style="top: 53.32%; right: 0"></div>
+
+      <div id="49" class="cells" style="bottom: 0; left: 53.32%"></div>
+      <div id="48" class="cells" style="bottom: 6.66%; left: 53.32%"></div>
+      <div
+        id="47"
+        class="cells safe"
+        style="bottom: 13.32%; left: 53.32%"
+      ></div>
+      <div id="46" class="cells" style="bottom: 19.98%; left: 53.32%"></div>
+      <div id="45" class="cells" style="bottom: 26.64%; left: 53.32%"></div>
+      <div id="44" class="cells" style="bottom: 33.3%; left: 53.32%"></div>
+
+      <div id="50" class="cells" style="bottom: 0; left: 46.66%"></div>
+      <div class="cells red" style="bottom: 6.66%; left: 46.66%"></div>
+      <div class="cells red" style="bottom: 13.32%; left: 46.66%"></div>
+      <div class="cells red" style="bottom: 19.98%; left: 46.66%"></div>
+      <div class="cells red" style="bottom: 26.64%; left: 46.66%"></div>
+      <div class="cells red" style="bottom: 33.3%; left: 46.66%"></div>
+
+      <div id="51" class="cells" style="bottom: 0; left: 40%"></div>
+      <div id="0" class="cells r-start" style="bottom: 6.66%; left: 40%"></div>
+      <div id="1" class="cells" style="bottom: 13.32%; left: 40%"></div>
+      <div id="2" class="cells" style="bottom: 19.98%; left: 40%"></div>
+      <div id="3" class="cells" style="bottom: 26.64%; left: 40%"></div>
+      <div id="4" class="cells" style="bottom: 33.3%; left: 40%"></div>
+
+      <div id="5" class="cells" style="top: 53.32%; left: 33.3%"></div>
+      <div id="6" class="cells" style="top: 53.32%; left: 26.64%"></div>
+      <div id="7" class="cells" style="top: 53.32%; left: 19.98%"></div>
+      <div id="8" class="cells safe" style="top: 53.32%; left: 13.32%"></div>
+      <div id="9" class="cells" style="top: 53.32%; left: 6.66%"></div>
+      <div id="10" class="cells" style="top: 53.32%; left: 0"></div>
+
+      <div id="gh5" class="cells green" style="top: 46.66%; left: 33.3%"></div>
+      <div class="cells green" style="top: 46.66%; left: 26.64%"></div>
+      <div class="cells green" style="top: 46.66%; left: 19.98%"></div>
+      <div class="cells green" style="top: 46.66%; left: 13.32%"></div>
+      <div class="cells green" style="top: 46.66%; left: 6.66%"></div>
+      <div id="11" class="cells" style="top: 46.66%; left: 0"></div>
+    </div>
+    <div class="dice" onclick="DiceRoll()" id="dice"></div>
+  </body>
+</html>
